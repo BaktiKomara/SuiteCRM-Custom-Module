@@ -10,19 +10,19 @@ README ini mendokumentasikan modul kustom yang perlu dibangun di SuiteCRM (lewat
  
 | # | Nama Modul (teknis) | Dibangun dari | Entitas ERD |
 |---|---|---|---|
-| 1 | `Hospitals` | Custom module baru | `RUMAH_SAKIT` |
-| 2 | `Patients` | Custom module baru | `PASIEN` |
-| 3 | `Users` | Modul bawaan, diperluas | `PENGGUNA` |
-| 4 | `Visits` | Custom module baru | `KUNJUNGAN` |
-| 5 | `Diagnoses` | Custom module baru (subpanel `Visits`) | `DIAGNOSIS` |
-| 6 | `Prescriptions` | Custom module baru (subpanel `Visits`) | `RESEP_OBAT` |
-| 7 | `Allergies` | Custom module baru (subpanel `Patients`) | `ALERGI` |
+| 1 | `hospitals` | Custom module baru | `RUMAH_SAKIT` |
+| 2 | `patients` | Custom module baru | `PASIEN` |
+| 3 | `users` | Modul bawaan, diperluas | `PENGGUNA` |
+| 4 | `patients_visits` | Custom module baru | `KUNJUNGAN` |
+| 5 | `patients_diagnoses` | Custom module baru (subpanel `Visits`) | `DIAGNOSIS` |
+| 6 | `patients_prescriptions` | Custom module baru (subpanel `Visits`) | `RESEP_OBAT` |
+| 7 | `patients_allergies` | Custom module baru (subpanel `Patients`) | `ALERGI` |
 | 8 | `Consents` | Custom module baru | `PERSETUJUAN` |
 | 9 | Audit log | Fitur bawaan (field-level audit + Tracker) | `LOG_AKSES` |
  
 ---
  
-## 1. Modul `Hospitals`
+## 1. Modul `hospitals`
  
 Dibangun dari template **Accounts**, bukan dari nol, agar langsung dapat fitur alamat & relasi bawaan.
  
@@ -39,7 +39,7 @@ Dibangun dari template **Accounts**, bukan dari nol, agar langsung dapat fitur a
  
 ---
  
-## 2. Modul `Patients`
+## 2. Modul `patients`
  
 Dibangun sebagai **modul kustom baru** lewat Module Builder (jangan pakai `Contacts` bawaan — field & relasinya terlalu spesifik medis untuk di-stretch dari situ).
  
@@ -59,7 +59,7 @@ Dibangun sebagai **modul kustom baru** lewat Module Builder (jangan pakai `Conta
  
 ---
  
-## 3. Modul `Users` (diperluas)
+## 3. Modul `users` (diperluas)
  
 Modul bawaan SuiteCRM, tambahkan field berikut lewat Studio:
  
@@ -72,7 +72,7 @@ Modul bawaan SuiteCRM, tambahkan field berikut lewat Studio:
  
 ---
  
-## 4. Modul `Visits`
+## 4. Modul `patients_visits`
  
 Modul pusat relasi — hampir semua modul lain menempel ke sini.
  
@@ -90,7 +90,7 @@ Modul pusat relasi — hampir semua modul lain menempel ke sini.
  
 ---
  
-## 5. Modul `Diagnoses`
+## 5. Modul `patients_diagnoses`
  
 **Field kustom:**
  
@@ -104,7 +104,7 @@ Tampil sebagai subpanel di dalam detail view `Visits`.
  
 ---
  
-## 6. Modul `Prescriptions`
+## 6. Modul `patients_rescriptions`
  
 **Field kustom:**
  
@@ -118,7 +118,7 @@ Tampil sebagai subpanel di dalam detail view `Visits`.
  
 ---
  
-## 7. Modul `Allergies`
+## 7. Modul `patients_allergies`
  
 **Field kustom:**
  
@@ -132,7 +132,7 @@ Sengaja direlasikan ke `Patients`, bukan `Visits` — alergi melekat seumur hidu
  
 ---
  
-## 8. Modul `Consents`
+## 8. Modul `consents`
  
 Modul paling penting untuk kepatuhan privasi — mengontrol siapa boleh lihat data pasien yang mana.
  
@@ -171,13 +171,13 @@ Tidak perlu modul baru. Aktifkan lewat:
  
 ## Urutan Build yang Disarankan
  
-1. `Hospitals` (tidak punya dependency ke modul lain)
-2. `Patients`
+1. `hospitals` (tidak punya dependency ke modul lain)
+2. `patients`
 3. Field tambahan di `Users` (tidak perlu modul baru)
-4. `Visits` (butuh `Hospitals`, `Patients`, `Users` sudah ada)
-5. `Diagnoses` & `Prescriptions` (butuh `Visits` sudah ada)
-6. `Allergies` (butuh `Patients` sudah ada)
-7. `Consents` + logic hook (butuh `Patients` & `Hospitals` sudah ada)
+4. `patients_visits` (butuh `Hospitals`, `Patients`, `Users` sudah ada)
+5. `patients_diagnoses` & `Prescriptions` (butuh `Visits` sudah ada)
+6. `patients_allergies` (butuh `Patients` sudah ada)
+7. `consents` + logic hook (butuh `Patients` & `Hospitals` sudah ada)
 8. Role Management & Security Group per RS
 9. Aktifkan field-level audit & cek modul Tracker
 ---
