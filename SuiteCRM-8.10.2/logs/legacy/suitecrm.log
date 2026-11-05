@@ -1,0 +1,24 @@
+Tue Oct 6 2026 at 11:40:54 [18][1][FATAL] createRelationshipMeta: Metadata for table media_objects does not exist
+Tue Oct 6 2026 at 11:42:09 [18][1][FATAL] Exception handling in /var/www/html/public/legacy/include/MVC/Controller/SugarController.php:409
+Tue Oct 6 2026 at 11:42:09 [18][1][FATAL] Exception in Controller: Failed to remove directory "/var/www/html/public/legacy/modules/Administration/../../../../cache/prod_6ac47bf65657c_deprecated/": rmdir(/var/www/html/cache/.!!8gA): Directory not empty
+Tue Oct 6 2026 at 11:43:43 [26][1][FATAL] createRelationshipMeta: Metadata for table media_objects does not exist
+Tue Oct 6 2026 at 11:45:32 [21][1][FATAL] createRelationshipMeta: Metadata for table media_objects does not exist
+Wed Oct 14 2026 at 14:18:29 [23][1][FATAL] ERROR: There was an error during your upload, please contact an administrator for help.
+Wed Oct 14 2026 at 14:18:50 [19][1][FATAL] ERROR: There was an error during your upload, please contact an administrator for help.
+Fri Oct 16 2026 at 10:38:37 [17][1][FATAL] UndeployedMetaDataImplementation->getFileName(): view type custom is not recognized
+Fri Oct 16 2026 at 10:38:37 [17][1][FATAL] UndeployedMetaDataImplementation->getFileName(): view type custom is not recognized
+Fri Oct 16 2026 at 10:59:38 [22][1][FATAL] createRelationshipMeta: Metadata for table media_objects does not exist
+Fri Oct 16 2026 at 10:59:49 [22][1][FATAL] createRelationshipMeta: Metadata for table media_objects does not exist
+Fri Oct 16 2026 at 11:00:22 [22][1][FATAL] createRelationshipMeta: Metadata for table media_objects does not exist
+Fri Oct 16 2026 at 11:19:53 [27][1][FATAL] createRelationshipMeta: Metadata for table media_objects does not exist
+Fri Oct 16 2026 at 11:20:30 [27][1][FATAL] Exception handling in /var/www/html/public/legacy/include/MVC/Controller/SugarController.php:409
+Fri Oct 16 2026 at 11:20:30 [27][1][FATAL] Exception in Controller: Failed to remove directory "/var/www/html/public/legacy/modules/Administration/../../../../cache/prod_6ad1a5fb3ab17_deprecated/": rmdir(/var/www/html/cache/.!!ou5): Directory not empty
+Fri Oct 16 2026 at 11:21:52 [25][1][FATAL] createRelationshipMeta: Metadata for table media_objects does not exist
+Fri Oct 16 2026 at 11:23:39 [20][1][FATAL] createRelationshipMeta: Metadata for table media_objects does not exist
+Fri Oct 16 2026 at 16:31:04 [17][1][FATAL] createRelationshipMeta: Metadata for table media_objects does not exist
+Fri Oct 16 2026 at 16:31:56 [17][1][FATAL] Exception handling in /var/www/html/public/legacy/include/MVC/Controller/SugarController.php:409
+Fri Oct 16 2026 at 16:31:56 [17][1][FATAL] Exception in Controller: Failed to remove directory "/var/www/html/public/legacy/modules/Administration/../../../../cache/prod_6ad1eef139db7_deprecated/": rmdir(/var/www/html/cache/.!!0N5): Directory not empty
+Thu Nov 5 2026 at 23:39:59 [21][1][FATAL] createRelationshipMeta: Metadata for table media_objects does not exist
+Thu Nov 5 2026 at 23:40:42 [21][1][FATAL] Exception handling in /var/www/html/public/legacy/include/MVC/Controller/SugarController.php:409
+Thu Nov 5 2026 at 23:40:42 [21][1][FATAL] Exception in Controller: Failed to remove directory "/var/www/html/public/legacy/modules/Administration/../../../../cache/prod_6aecb17596e69_deprecated/": rmdir(/var/www/html/cache/.!!MhB): Directory not empty
+Thu Nov 5 2026 at 23:42:34 [25][1][FATAL] createRelationshipMeta: Metadata for table media_objects does not exist
